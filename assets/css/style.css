@@ -1,0 +1,29 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+ul.pagination {
+    margin: 0px 0px 40px;
+    float: right;
+    text-align: right;
+    width: 100%;
+}
+
+h2.card-title {
+	margin: 1.024rem 0px 1.024rem;
+	line-height:30px;
+}
+
+.prettyprint {
+	background: #ececec;
+	display: block;
+	padding: 15px 0;
+}

@@ -1,0 +1,21 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="section no-pad-bot" id="tag-banner" class="{{post_class}}" >
+  <div class="container">
+  
+	<br><br>
+	<h1 class="header center orange-text">{{tag.name}}</h1>
+	
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+	
+	<br><br>
+	
+	{{! Previous/next page links - displayed on every page }}
+	{{pagination}}
+	
+  </div>
+</div>	
+	
+

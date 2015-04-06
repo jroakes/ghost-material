@@ -1,0 +1,40 @@
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+<div class="card" class="{{post_class}}" >
+ 
+	<div class="card-content">
+		<h2 class="card-title truncate"><a href="{{url}}">{{{title}}}</a></h2>
+		{{excerpt words="26"}} 
+	</div>
+
+	<div class="card-action">
+		{{author}}
+		<a href="{{url}}">View Post</a>
+		<a href="javascript:void(0);" class="activator" > Read Bio</a>
+	</div>
+
+	<div class="card-reveal">
+	  <div class="row">
+	  	<div class="col s1">
+	  		{{#if author.image}}<img width="50" class="responsive-img circle" src="{{author.image}}" alt="Author image" />{{/if}}
+	  	</div>
+	  	<div class="col s11">
+			<span class="card-title blue-text text-darken-2">{{author.name}}<i class="mdi-navigation-close right"></i></span>
+		</div>
+	  </div>
+	  <p>{{author.bio}}</p>
+	</div>
+        	
+	
+</div>	
+
+
+{{/foreach}}
+
+
+
+
+	    
+	    

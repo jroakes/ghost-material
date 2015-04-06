@@ -1,0 +1,13 @@
+
+	 <ul class="pagination">
+	  {{#if next}}
+	  	<li class="waves-effect pagination-item older"><a href="{{page_url next}}"><i class="mdi-navigation-chevron-left"></i></a></li>
+	  {{else}}
+	    <li class="disabled pagination-item older"><a href="#!"><i class="mdi-navigation-chevron-left"></i></a></li>
+	  {{/if}}
+	  {{#if prev}}
+	  	<li class="waves-effect pagination-item newer"><a href="{{page_url prev}}"><i class="mdi-navigation-chevron-right"></i></a></li>
+	  {{else}}
+	  	<li class="disabled pagination-item newer"><a href="#!"><i class="mdi-navigation-chevron-right"></i></a></li>
+	  {{/if}}
+	 </ul>

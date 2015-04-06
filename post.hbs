@@ -1,0 +1,57 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+	<div class="section no-pad-bot" id="post-banner" class="{{post_class}}" >
+	  <div class="container">
+			
+			<h1 class="header center orange-text">{{title}}</h1>
+		
+			{{content}}
+			
+			<div class="section"></div>
+			
+			<div class="card" class="{{post_class}}" >
+			 
+				<div class="card-content">
+				  <div class="row">
+				  	<div class="col s1">
+				  		{{#if author.image}}<img width="50" class="responsive-img circle" src="{{author.image}}" alt="Author image" />{{/if}}
+				  	</div>
+				  	<div class="col s11">
+						<span class="card-title blue-text text-darken-2">{{author.name}}</span>
+					</div>
+				  </div>
+				  <p>{{author.bio}}</p>
+				</div>
+			
+				<div class="card-action">
+					Share on:
+		            <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+		                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		                <span class="hidden">Twitter</span>
+		            </a>
+		            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+		                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		                <span class="hidden">Facebook</span>
+		            </a>
+		            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+		               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+		                <span class="hidden">Google+</span>
+		            </a>
+				</div>
+			        	
+				
+			</div>	
+
+
+
+		
+	  </div>
+	</div>	
+
+{{/post}}

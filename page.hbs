@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+	<div class="section no-pad-bot" id="page-banner" class="{{post_class}}" >
+	  <div class="container">
+			
+			<h1 class="header center orange-text">{{title}}</h1>
+			
+			{{content}}
+			
+		
+	  </div>
+	</div>	
+	
+{{/post}}
